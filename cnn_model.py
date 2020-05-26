@@ -12,7 +12,22 @@ from keras.preprocessing.image import ImageDataGenerator
 model = Sequential()
 
 # making cnn layers
+model.add(Convolution2D(filters=128, 
+                        kernel_size=(3,3), 
+                        activation='relu',
+                   input_shape=(200,200 , 3)
+                       ))
+model.add(Convolution2D(filters=64, 
+                        kernel_size=(3,3), 
+                        activation='relu',
+                   input_shape=(200,200 , 3)
+                       ))
 model.add(Convolution2D(filters=32, 
+                        kernel_size=(3,3), 
+                        activation='relu',
+                   input_shape=(200,200 , 3)
+                       ))
+model.add(Convolution2D(filters=16, 
                         kernel_size=(3,3), 
                         activation='relu',
                    input_shape=(200,200 , 3)
